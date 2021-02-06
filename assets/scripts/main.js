@@ -1,5 +1,5 @@
 // main.js
-window.alert('ddsfas!');
+window.alert('dss!');
 
 let slide = document.getElementById("volume-slider");
 
@@ -13,13 +13,17 @@ document.getElementById("honk-btn").addEventListener("click", function(event){
     event.preventDefault();
 });
 
+
+
 num.addEventListener("input",function(event){
-    slide.setAttribute("value", num.getAttribute("value"));
+    slide.value = this.value;
+    aud.volume = this.value;
     event.preventDefault();
 });
 
 slide.addEventListener("input",function(event){
-    num.setAttribute("value", slide.getAttribute("value"));
+    num.value = this.value;
+    aud.volume = this.value;
     event.preventDefault();
 });
 // TODO
