@@ -1,5 +1,5 @@
 // main.js
-//window.alert('Welcome to my home page!');
+window.alert('Welcome to my home page!');
 let slide = document.getElementById("volume-slider");
 let slideVal = slide.getAttribute("value");
 let aud = document.getElementById("horn-sound");
