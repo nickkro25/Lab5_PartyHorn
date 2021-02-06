@@ -1,5 +1,5 @@
 // main.js
-window.alert('party');
+//window.alert('party');
 
 let slide = document.getElementById("volume-slider");
 
