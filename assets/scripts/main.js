@@ -1,5 +1,5 @@
 // main.js
-window.alert('prevent def!');
+window.alert('dont print val!');
 
 let slide = document.getElementById("volume-slider");
 
@@ -19,7 +19,7 @@ document.getElementById("honk-btn").addEventListener("click", function(event){
 num.addEventListener("input",function(event){
     slide.value = this.value;
     aud.volume = this.value;
-    window.alert(this.value);
+    //window.alert(this.value);
     event.preventDefault();
     if(this.value == 0){
         vImg.src = "./assets/media/icons/volume-level-0.svg";
@@ -35,7 +35,7 @@ num.addEventListener("input",function(event){
 slide.addEventListener("input",function(event){
     num.value = this.value;
     aud.volume = this.value;
-    window.alert(this.value);
+    //window.alert(this.value);
     event.preventDefault();
     if(this.value == 0){
         vImg.src = "./assets/media/icons/volume-level-0.svg";
