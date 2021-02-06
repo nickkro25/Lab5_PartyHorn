@@ -1,5 +1,5 @@
 // main.js
-window.alert('dont print val!');
+window.alert('divide by 100');
 
 let slide = document.getElementById("volume-slider");
 
@@ -17,15 +17,15 @@ document.getElementById("honk-btn").addEventListener("click", function(event){
 
 
 num.addEventListener("input",function(event){
-    slide.value = this.value;
-    aud.volume = this.value;
+    let val = this.value;
+    aud.volume = val/100;
     //window.alert(this.value);
     event.preventDefault();
     if(this.value == 0){
         vImg.src = "./assets/media/icons/volume-level-0.svg";
-    } else if(this.value < 34){
+    } else if(this.value < 34.0){
         vImg.src = "./assets/media/icons/volume-level-1.svg";
-    } else if(this.value < 67){
+    } else if(this.value < 67.0){
         vImg.src = "./assets/media/icons/volume-level-2.svg";
     }else{
         vImg.src = "./assets/media/icons/volume-level-4.svg";
@@ -33,15 +33,16 @@ num.addEventListener("input",function(event){
 });
 
 slide.addEventListener("input",function(event){
-    num.value = this.value;
-    aud.volume = this.value;
+    let val = this.value;
+    num.value = val;
+    aud.volume = val/100;
     //window.alert(this.value);
     event.preventDefault();
-    if(this.value == 0){
+    if(val == 0){
         vImg.src = "./assets/media/icons/volume-level-0.svg";
-    } else if(this.value < 34){
+    } else if(val < 34.0){
         vImg.src = "./assets/media/icons/volume-level-1.svg";
-    } else if(this.value < 67){
+    } else if(val < 67.0){
         vImg.src = "./assets/media/icons/volume-level-2.svg";
     }else{
         vImg.src = "./assets/media/icons/volume-level-4.svg";
