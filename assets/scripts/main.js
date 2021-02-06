@@ -1,5 +1,5 @@
 // main.js
-window.alert('volume');
+window.alert('party');
 
 let slide = document.getElementById("volume-slider");
 
@@ -8,6 +8,9 @@ let num = document.getElementById("volume-number");
 let aud = document.getElementById("horn-sound");
 
 let vImg = document.getElementById("volume-image");
+
+let sImg = document.getElementById("sound-image");
+
 
 document.getElementById("honk-btn").addEventListener("click", function(event){
     aud.play();
@@ -53,4 +56,21 @@ slide.addEventListener("input",function(event){
         vImg.src = "./assets/media/icons/volume-level-3.svg";
     }
 });
+
+document.getElementById("radio-air-horn").addEventListener("change", function(event){
+    sImg.src = "./assets/media/images/air-horn.svg";
+    aud.src = "./assets/media/audio/air-horn.mp3";
+});
+
+document.getElementById("radio-car-horn").addEventListener("change", function(event){
+    sImg.src = "./assets/media/images/car.svg";
+    aud.src = "./assets/media/audio/car-horn.mp3";
+});
+
+document.getElementById("radio-party-horn").addEventListener("change", function(event){
+    sImg.src = "./assets/media/images/party-horn.svg";
+    aud.src = "./assets/media/audio/party-horn.mp3";
+});
+
+
 // TODO
